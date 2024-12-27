@@ -110,6 +110,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<environmentVariables>
+						<JAVA_TOOL_OPTIONS>-Xmx256m -Xms256m -XX:MaxMetaspaceSize=64m</JAVA_TOOL_OPTIONS>
+					</environmentVariables>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
