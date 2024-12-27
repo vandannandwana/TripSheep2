@@ -17,7 +17,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # Copy the built jar file from the Maven build stage
-COPY --from=build /app/target/TripSheep.jar /TripSheep.jar
+COPY --from=build /app/target/TripSheep.jar /TripSheep-0.0.1-SNAPSHOT.jar
 
 # Set the entry point for the application
 ENTRYPOINT ["java", "-jar", "/TripSheep.jar"]
